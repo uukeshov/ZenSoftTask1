@@ -2,7 +2,7 @@ package services;
 
 import factory.AppProperties;
 import main.Constants;
-import models.SearchRequest;
+import models.SearchResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,12 +16,12 @@ import java.io.IOException;
  */
 public class YahooSearchService implements SearchService {
     private Utils utils;
-    private SearchRequest searchRequest;
+    private SearchResponse searchRequest;
     private String searchEngine = Constants.Yahoo;
 
-    public SearchRequest search(String searchText) {
+    public SearchResponse search(String searchText) {
         utils = new Utils();
-        searchRequest = new SearchRequest();
+        searchRequest = new SearchResponse();
         String request = searchEngine + searchText;
         try {
             Document doc = Jsoup

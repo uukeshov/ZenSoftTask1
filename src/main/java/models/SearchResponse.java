@@ -3,12 +3,12 @@ package models;
 /**
  * Created by uukeshov on 19.10.2016.
  */
-public class SearchRequest {
+public class SearchResponse {
     private String title;
     private String url;
     private String provider;
 
-    public SearchRequest() {
+    public SearchResponse() {
     }
 
     public String getTitle() {
@@ -37,7 +37,7 @@ public class SearchRequest {
 
     @Override
     public String toString() {
-        return "SearchRequest{" +
+        return "SearchResponse{" +
                 "title='" + title + '\'' +
                 ", url='" + url + '\'' +
                 ", provider='" + provider + '\'' +

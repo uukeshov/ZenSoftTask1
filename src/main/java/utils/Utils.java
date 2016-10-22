@@ -21,7 +21,6 @@ public class Utils {
 
     public String getUrl(String url) {
         String domainName = "";
-        System.out.println(url.toString());
         matcher = URL_PATTERN.matcher(url);
         if (matcher.find()) {
             domainName = matcher.group(0).toLowerCase().trim();

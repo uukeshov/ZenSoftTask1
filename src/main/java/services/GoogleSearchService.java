@@ -6,7 +6,7 @@ import com.google.api.services.customsearch.Customsearch;
 import com.google.api.services.customsearch.model.Result;
 import com.google.api.services.customsearch.model.Search;
 import factory.AppProperties;
-import models.SearchRequest;
+import models.SearchResponse;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import java.util.List;
  * Created by uukeshov on 19.10.2016.
  */
 public class GoogleSearchService implements SearchService {
-    private SearchRequest searchRequest;
+    private SearchResponse searchRequest;
 
-    public SearchRequest search(String searchText) {
+    public SearchResponse search(String searchText) {
         Customsearch customsearch = new Customsearch.Builder(new NetHttpTransport(), new JacksonFactory(), null).setApplicationName("your application name").build();
         List<Result> resultList = null;
-        searchRequest = new SearchRequest();
+        searchRequest = new SearchResponse();
         try {
             Customsearch.Cse.List list = customsearch.cse().list(searchText);
             list.setKey("AIzaSyBoco2nGdw31ucf3YnbO6T2IomIbC35FJo");

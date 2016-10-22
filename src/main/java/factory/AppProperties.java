@@ -7,7 +7,6 @@ public class AppProperties {
 
     public enum SearchEngine {
         Google("Google"), Yahoo("Yahoo"), Bing("Bing");
-
         public final String searchProvider;
 
         SearchEngine(String searchProvider) {
@@ -15,5 +14,9 @@ public class AppProperties {
         }
     }
 
-    public static final SearchEngine searchEngine = SearchEngine.Yahoo;
+    public static SearchEngine searchEngine = SearchEngine.Yahoo;
+
+    public void alter(SearchEngine searchEngine) {
+        this.searchEngine = searchEngine;
+    }
 }
