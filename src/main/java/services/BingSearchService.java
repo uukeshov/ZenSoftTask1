@@ -2,7 +2,7 @@ package services;
 
 
 import factory.AppProperties;
-import main.Constants;
+import utils.Constants;
 import models.SearchResponse;
 import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;

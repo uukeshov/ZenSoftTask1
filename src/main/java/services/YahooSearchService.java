@@ -1,7 +1,7 @@
 package services;
 
 import factory.AppProperties;
-import main.Constants;
+import utils.Constants;
 import models.SearchResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
